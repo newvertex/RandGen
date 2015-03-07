@@ -50,4 +50,26 @@
     nbproject/build-impl.xml and nbproject/jfx-impl.xml.
 
     -->
+    <target name="-post-jfx-deploy">
+        <fx:deploy width="${javafx.run.width}" height="${javafx.run.height}"
+                   nativeBundles="all"
+                   outdir="${basedir}/${dist.dir}" outfile="${application.title}">
+            <fx:application name="${application.title}"
+                            mainClass="com.newvertex.randgen.RandomGenerator"
+                            version="0.0.1"/>
+            <fx:preferences shortcut="true" menu="true"/>
+            <fx:resources>
+                <fx:fileset dir="${basedir}/${dist.dir}"
+                            includes="*.jar"/>
+                <fx:fileset dir="${basedir}/${dist.dir}"
+                            includes="lib/**"/>
+                <fx:fileset dir="${basedir}"
+                            includes="res/**"/>
+            </fx:resources>
+            <fx:info title="${application.title}"
+                     vendor="${application.vendor}"
+                     copyright="Copyright © 2015 newvertex.com"
+            />
+        </fx:deploy>         
+    </target>
 </project>
