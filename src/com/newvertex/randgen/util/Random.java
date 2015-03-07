@@ -20,6 +20,17 @@ public class Random {
         return new java.util.Random().nextInt(end - start) + start + 1;
     }
 
+    public ArrayList<Integer> randomClass(Integer seed, int number) {
+        ArrayList<Integer> result = new ArrayList<>();
+        java.util.Random rnd = new java.util.Random(seed);
+
+        for (int i = 0; i < number; i++) {
+            result.add(rnd.nextInt(end - start) + start + 1);
+        }
+
+        return result;
+    }
+
     public ArrayList<Integer> middleSquare(Integer seed, int number) {
         ArrayList<Integer> result = null;
 
