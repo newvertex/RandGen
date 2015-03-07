@@ -17,7 +17,7 @@ public class Random {
     }
 
     public int randomClass() {
-        return new java.util.Random().nextInt((end - start) + start + 1);
+        return new java.util.Random().nextInt(end - start) + start + 1;
     }
 
     public ArrayList<Integer> middleSquare(Integer seed, int number) {
