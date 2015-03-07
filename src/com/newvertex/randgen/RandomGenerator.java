@@ -38,6 +38,7 @@ public class RandomGenerator extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Random Generator");
+            primaryStage.setResizable(false);
             primaryStage.show();
 
         } catch (IOException ex) {
