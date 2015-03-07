@@ -32,14 +32,22 @@ public class RootLayoutController implements Initializable {
 
     @FXML
     private void handleGenerate(ActionEvent event) {
+        app.generateRandom(
+                Integer.parseInt(start.getText()),
+                Integer.parseInt(end.getText()),
+                Integer.parseInt(number.getText()),
+                isMiddleSquareMethod.isSelected());
     }
 
     @FXML
     private void handleClear(ActionEvent event) {
+        app.getItemList().clear();
     }
 
     public void setApp(RandomGenerator app) {
         this.app = app;
+
+        listView.setItems(app.getItemList());
     }
 
 }

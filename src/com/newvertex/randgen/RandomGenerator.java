@@ -52,4 +52,8 @@ public class RandomGenerator extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    public void generateRandom(int start, int end, int number, boolean isMiddleSquare) {
+        
+    }
 }
