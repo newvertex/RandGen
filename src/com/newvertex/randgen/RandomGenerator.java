@@ -62,9 +62,7 @@ public class RandomGenerator extends Application {
         if (isMiddleSquare) {
             itemList.addAll(rnd.middleSquare(seed, number));
         } else {
-            for (int i = 0; i < number; i++) {
-                itemList.add(rnd.randomClass());
-            }
+            itemList.addAll(rnd.randomClass(seed, number));
         }
     }
 
